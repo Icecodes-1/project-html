@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    --bg: #fafafa;
+    --btn-color: #0e5a25;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "Limelight", sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+ol{
+    margin-left: 24px;
+}
+
+.container{
+    max-width: 850;
+    width: 80%;
+    margin: auto;
+    padding: 35px 0;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.gallary{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.gallary-card{
+    height: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallary-card img{
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.gallary-card:hover{
+    transform: scale(1.05);
+}
+
+.caption{
+    position: absolute;
+    height: 70px;
+    left: 0;
+    background-color: var(--btn-color);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    bottom: -100%;
+    padding: 6px 0;
+    transition: .5s;
+}
+
+.caption a{
+    background-color: #fff;
+    padding: 3px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    color: var(--btn-color);
+}
+
+.gallary-card:hover .caption{
+    bottom: 0;
+}
+
+.recipe{
+    margin-top: 20px;
+    display: grid;
+    gap: 15px;
+}
+
+.recipe .item{
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px dashed #000;
+}
